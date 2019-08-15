@@ -39,7 +39,7 @@ export type CustomerActions = ICustomerCreateAction | ICustomerEditAction | ICus
 export const createCustomer: ActionCreator<
   ThunkAction<void, ICustomerState, null, ICustomerCreateAction>
 > = (data: ICustomer) => {
-  return async (dispatch: Dispatch) => {
+  return (dispatch: Dispatch) => {
     dispatch({
         data: data,
         type: CustomerActionTypes.CREATE_CUSTOMER,
@@ -54,7 +54,6 @@ export const editCustomer: ActionCreator<
   ThunkAction<void, ICustomerState, null, ICustomerCreateAction>
 > = (data: ICustomer, id: Number) => {
   return (dispatch: Dispatch) => {
-    console.log('vvvvvvv', data, id)
     dispatch({
         data: data,
         id: id,

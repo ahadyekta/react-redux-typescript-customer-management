@@ -21,7 +21,7 @@ const CustomerTable: React.FC<IProps> = ({customers,deleteCustomer }) => {
         </thead>
         <tbody>
             {customers && customers.map(customer =>
-                <tr key={customer.id}>
+                <tr key={customer.id} data-automation='customer-row'>
                     <td>{customer.first_name}</td>
                     <td>{customer.last_name}</td>
                     <td>{customer.DOB}</td>
