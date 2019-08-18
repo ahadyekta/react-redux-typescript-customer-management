@@ -1,86 +1,139 @@
-import * as React from 'react';
-import { RouteComponentProps, withRouter, Link } from 'react-router-dom';
-import { ICustomer } from '../../../reducers/customerReducer';
-
+import * as React from 'react'
+import { RouteComponentProps, withRouter, Link } from 'react-router-dom'
+import { ICustomer } from '../../../reducers/customerReducer'
+import {
+    LIST_URL,
+    FIRSTNAME_LABEL,
+    LASTNAME_LABEL,
+    DOB_LABEL,
+    SUBMIT_LABEL,
+    NO_CUSTOMER_FOUND_LABEL,
+    BACK_LABEL,
+    CANCEL_LABEL,
+    FIRSTNAME_PLACEHOLDER,
+    LASTNAME_PLACEHOLDER,
+    DOB_PLACEHOLDER,
+    EDIT_CUSTOMER_LABEL,
+    CREATE_CUSTOMER_LABEL,
+} from '../../../constansts'
 
 export interface IState {
-    [key: string]: any;
-    first_name: string;
-    last_name: string;
-    DOB: string;
+    [key: string]: string
+    firstName: string
+    lastName: string
+    DOB: string
 }
 
-export interface IProps extends RouteComponentProps<any> {
-    createCustomer: (data:ICustomer) => void;
-    editCustomer: (data:ICustomer, id:Number) => void;
-    customer: ICustomer | undefined;
-    isEdit: boolean;
+interface IRoute {
+    id: string | undefined
+}
+export interface IProps extends RouteComponentProps<IRoute> {
+    createCustomer: (data: ICustomer) => void
+    editCustomer: (data: ICustomer, id: number) => void
+    customer: ICustomer | undefined
+    isEdit: boolean
 }
 class Form extends React.Component<IProps, IState> {
     state = {
-        first_name: (this.props.customer && this.props.customer.first_name) || '',
-        last_name:  (this.props.customer && this.props.customer.last_name) || '',
+        firstName: (this.props.customer && this.props.customer.firstName) || '',
+        lastName: (this.props.customer && this.props.customer.lastName) || '',
         DOB: (this.props.customer && this.props.customer.DOB) || '',
     }
 
     private processFormSubmission = (e: React.FormEvent<HTMLFormElement>): void => {
-        e.preventDefault();
-        if(this.props.isEdit){
+        e.preventDefault()
+        if (this.props.isEdit) {
             //edit
-            this.props.editCustomer(this.state,Number(this.props.match.params.id) )
-        }else{
+            this.props.editCustomer(this.state, Number(this.props.match.params.id))
+        } else {
             //create
             this.props.createCustomer(this.state)
         }
-        this.props.history.push('/');
+        this.props.history.push(LIST_URL)
     }
 
     private handleInputChanges = (e: React.FormEvent<HTMLInputElement>): void => {
-        e.preventDefault();
+        e.preventDefault()
         this.setState({
             [e.currentTarget.name]: e.currentTarget.value,
         })
     }
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <div>
-                <div className={"col-md-12 form-wrapper"}>
-                    <h2>
-                        {`${this.props.isEdit ? 'Edit' : 'Create'} Customer`}
-                    </h2>
-                    {!this.props.customer && this.props.isEdit &&
+                <div className={'col-md-12 form-wrapper'}>
+                    <h2>{`${this.props.isEdit ? EDIT_CUSTOMER_LABEL : CREATE_CUSTOMER_LABEL}`}</h2>
+                    {!this.props.customer && this.props.isEdit && (
                         <div>
-                            <p>No customer found with this id</p>
-                            <p><Link to='/' className="btn btn-outline-secondary mr-3">Back</Link></p>
+                            <p>{NO_CUSTOMER_FOUND_LABEL}</p>
+                            <p>
+                                <Link to={LIST_URL} className="btn btn-outline-secondary mr-3">
+                                    {BACK_LABEL}
+                                </Link>
+                            </p>
                         </div>
-                    }
-                    {(!this.props.isEdit || this.props.customer) &&
-                        <form id={"post-form"} onSubmit={this.processFormSubmission}>
+                    )}
+                    {(!this.props.isEdit || this.props.customer) && (
+                        <form id={'post-form'} onSubmit={this.processFormSubmission}>
                             <div className="form-group col-md-12">
-                                <label htmlFor="first_name"> First Name </label>
-                                <input type="text" id="first_name" required={true} onChange={(e) => this.handleInputChanges(e)} name="first_name" className="form-control" placeholder="Customer's first name" defaultValue={this.state.first_name}/>
+                                <label htmlFor="firstName"> {FIRSTNAME_LABEL} </label>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    required={true}
+                                    onChange={(e): void => {
+                                        this.handleInputChanges(e)
+                                    }}
+                                    name="firstName"
+                                    className="form-control"
+                                    placeholder={FIRSTNAME_PLACEHOLDER}
+                                    defaultValue={this.state.firstName}
+                                />
                             </div>
 
                             <div className="form-group col-md-12">
-                                <label htmlFor="last_name"> Last Name </label>
-                                <input type="text" id="last_name" required={true} onChange={(e) => this.handleInputChanges(e)} name="last_name" className="form-control" placeholder="Customer's last name" defaultValue={this.state.last_name} />
+                                <label htmlFor="lastName"> {LASTNAME_LABEL} </label>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    required={true}
+                                    onChange={(e): void => {
+                                        this.handleInputChanges(e)
+                                    }}
+                                    name="lastName"
+                                    className="form-control"
+                                    placeholder={LASTNAME_PLACEHOLDER}
+                                    defaultValue={this.state.lastName}
+                                />
                             </div>
 
                             <div className="form-group col-md-12">
-                                <label htmlFor="DOB"> Date of Birth </label>
-                                <input type="text" id="DOB" required={true} onChange={(e) => this.handleInputChanges(e)} name="DOB" className="form-control" placeholder="24/03/1988"  defaultValue={this.state.DOB}/>
+                                <label htmlFor="DOB"> {DOB_LABEL} </label>
+                                <input
+                                    type="text"
+                                    id="DOB"
+                                    required={true}
+                                    onChange={(e): void => {
+                                        this.handleInputChanges(e)
+                                    }}
+                                    name="DOB"
+                                    className="form-control"
+                                    placeholder={DOB_PLACEHOLDER}
+                                    defaultValue={this.state.DOB}
+                                />
                             </div>
 
                             <div className="form-group col-md-6 btn-toolbar pull-right">
                                 <button className="btn btn-success mr-3" type="submit" id="submit">
-                                    Submit
+                                    {SUBMIT_LABEL}
                                 </button>
-                                <Link to='/' className="btn btn-outline-secondary mr-3">Cancel</Link>
+                                <Link to={LIST_URL} className="btn btn-outline-secondary mr-3">
+                                    {CANCEL_LABEL}
+                                </Link>
                             </div>
                         </form>
-                    }
-                    
+                    )}
                 </div>
             </div>
         )

@@ -2,26 +2,26 @@
     "customers": [
         {
             "id": 1,
-            "first_name": "Ross",
-            "last_name": "Geller",
+            "firstName": "Ross",
+            "lastName": "Geller",
             "DOB": "11/03/1950"
         },
         {
             "id": 2,
-            "first_name": "Rachel",
-            "last_name": "Green",
+            "firstName": "Rachel",
+            "lastName": "Green",
             "DOB": "01/06/1955"
         },
         {
             "id": 3,
-            "first_name": "Chandler",
-            "last_name": "Bing",
+            "firstName": "Chandler",
+            "lastName": "Bing",
             "DOB": "22/06/1944"
         },
         {
             "id": 4,
-            "first_name": "Monica",
-            "last_name": "Geller",
+            "firstName": "Monica",
+            "lastName": "Geller",
             "DOB": "08/05/1956"
         }
     ]

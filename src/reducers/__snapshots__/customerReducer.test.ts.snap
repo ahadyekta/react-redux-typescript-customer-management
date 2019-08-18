@@ -4,21 +4,21 @@ exports[`Testing customerReducer When event is CREATE_CUSTOMER, it should add th
 Array [
   Object {
     "DOB": "11/03/1950",
-    "first_name": "Ross",
+    "firstName": "Ross",
     "id": 1,
-    "last_name": "Geller",
+    "lastName": "Geller",
   },
   Object {
     "DOB": "01/06/1955",
-    "first_name": "Rachel",
+    "firstName": "Rachel",
     "id": 2,
-    "last_name": "Green",
+    "lastName": "Green",
   },
   Object {
     "DOB": "3/5/1977",
-    "first_name": "John",
+    "firstName": "John",
     "id": 3,
-    "last_name": "Doe",
+    "lastName": "Doe",
   },
 ]
 `;
@@ -27,9 +27,9 @@ exports[`Testing customerReducer When event is DELETE_CUSTOMER, it should delete
 Array [
   Object {
     "DOB": "01/06/1955",
-    "first_name": "Rachel",
+    "firstName": "Rachel",
     "id": 2,
-    "last_name": "Green",
+    "lastName": "Green",
   },
 ]
 `;
@@ -38,15 +38,15 @@ exports[`Testing customerReducer When event is EDIT_CUSTOMER, it should delete t
 Array [
   Object {
     "DOB": "5/7/1967",
-    "first_name": "Tom",
+    "firstName": "Tom",
     "id": 1,
-    "last_name": "Cruz",
+    "lastName": "Cruz",
   },
   Object {
     "DOB": "01/06/1955",
-    "first_name": "Rachel",
+    "firstName": "Rachel",
     "id": 2,
-    "last_name": "Green",
+    "lastName": "Green",
   },
 ]
 `;
