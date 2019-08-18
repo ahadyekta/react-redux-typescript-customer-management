@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-redux-typescript-customer-management/static/css/main.c1fd81b0.chunk.css",
-    "main.js": "/react-redux-typescript-customer-management/static/js/main.2822c9b4.chunk.js",
-    "main.js.map": "/react-redux-typescript-customer-management/static/js/main.2822c9b4.chunk.js.map",
+    "main.js": "/react-redux-typescript-customer-management/static/js/main.51194d58.chunk.js",
+    "main.js.map": "/react-redux-typescript-customer-management/static/js/main.51194d58.chunk.js.map",
     "runtime~main.js": "/react-redux-typescript-customer-management/static/js/runtime~main.808790b1.js",
     "runtime~main.js.map": "/react-redux-typescript-customer-management/static/js/runtime~main.808790b1.js.map",
     "static/js/2.9e286e37.chunk.js": "/react-redux-typescript-customer-management/static/js/2.9e286e37.chunk.js",
     "static/js/2.9e286e37.chunk.js.map": "/react-redux-typescript-customer-management/static/js/2.9e286e37.chunk.js.map",
     "index.html": "/react-redux-typescript-customer-management/index.html",
-    "precache-manifest.00a17607d73422e06ed48029ce574895.js": "/react-redux-typescript-customer-management/precache-manifest.00a17607d73422e06ed48029ce574895.js",
+    "precache-manifest.c176b3d4b7b6525a7a3e096014cdd445.js": "/react-redux-typescript-customer-management/precache-manifest.c176b3d4b7b6525a7a3e096014cdd445.js",
     "service-worker.js": "/react-redux-typescript-customer-management/service-worker.js",
     "static/css/main.c1fd81b0.chunk.css.map": "/react-redux-typescript-customer-management/static/css/main.c1fd81b0.chunk.css.map"
   }
