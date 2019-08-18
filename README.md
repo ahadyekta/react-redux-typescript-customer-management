@@ -1,5 +1,5 @@
 This project is a sample customer management tools
-
+[DEMO](https://ahadyekta.github.io/react-redux-typescript-customer-management)
 ## Available Scripts
 
 In the project directory, you can run:
