@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c1fd81b0.chunk.css",
-    "main.js": "/static/js/main.f109bf38.chunk.js",
-    "main.js.map": "/static/js/main.f109bf38.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.28fe96e5.js",
-    "runtime~main.js.map": "/static/js/runtime~main.28fe96e5.js.map",
-    "static/js/2.9e286e37.chunk.js": "/static/js/2.9e286e37.chunk.js",
-    "static/js/2.9e286e37.chunk.js.map": "/static/js/2.9e286e37.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.2310fb663c617460145c585631052599.js": "/precache-manifest.2310fb663c617460145c585631052599.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c1fd81b0.chunk.css.map": "/static/css/main.c1fd81b0.chunk.css.map"
+    "main.css": "/react-redux-typescript-customer-management/static/css/main.c1fd81b0.chunk.css",
+    "main.js": "/react-redux-typescript-customer-management/static/js/main.2822c9b4.chunk.js",
+    "main.js.map": "/react-redux-typescript-customer-management/static/js/main.2822c9b4.chunk.js.map",
+    "runtime~main.js": "/react-redux-typescript-customer-management/static/js/runtime~main.808790b1.js",
+    "runtime~main.js.map": "/react-redux-typescript-customer-management/static/js/runtime~main.808790b1.js.map",
+    "static/js/2.9e286e37.chunk.js": "/react-redux-typescript-customer-management/static/js/2.9e286e37.chunk.js",
+    "static/js/2.9e286e37.chunk.js.map": "/react-redux-typescript-customer-management/static/js/2.9e286e37.chunk.js.map",
+    "index.html": "/react-redux-typescript-customer-management/index.html",
+    "precache-manifest.00a17607d73422e06ed48029ce574895.js": "/react-redux-typescript-customer-management/precache-manifest.00a17607d73422e06ed48029ce574895.js",
+    "service-worker.js": "/react-redux-typescript-customer-management/service-worker.js",
+    "static/css/main.c1fd81b0.chunk.css.map": "/react-redux-typescript-customer-management/static/css/main.c1fd81b0.chunk.css.map"
   }
 }
